@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercise - 3</title>
+<style type="text/css">
+	#form{
+		width: 400px;
+		height: 100px;
+		margin: 100px 100px 100px 500px;
+		text-align: center;
+		padding: 10px 20px 20px 20px;
+	}
+	.label{
+		color: green;
+		font-size: 20px;
+	}
+	#submit{
+		background-color: cyan;
+		color: red;
+		border-radius: 10px;
+	}
+	
+</style>
+</head>
+<body>
+	<form method="post" id="form" action="factorial">
+		<table>
+			<tr>
+				<td class="label">Number : </td>
+				<td><input id="name" type="text" name="num"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input id="submit" type="submit" value="Factorial" onclick=" return check()"/></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function check(){
+			var x=document.getElementById("name").value.trim();
+			if(x=='' || x.length==0){
+				alert("You have not entered your name");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</body>
+</html>
